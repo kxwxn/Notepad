@@ -72,3 +72,15 @@ myPromise2
     return value / 10;
   })
   .then((value) => console.log(value));
+
+//--------------------------------------------------------------
+
+function outer(x) {
+  return function inner() {
+    return x * x;
+  };
+}
+
+const outer = (x) => () => x * x;
+
+// Those two functions are the same. The second one is just a shorter version of the first one. ARROW FUNCTION
